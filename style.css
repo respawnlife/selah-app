@@ -1,0 +1,111 @@
+:root {
+  --ink: #1f2e2a;
+  --muted: #5c6f68;
+  --brand: #2f5d50;
+  --brand-soft: #e7efe9;
+  --bg: #faf9f6;
+  --line: #e3e0d8;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  color: var(--ink);
+  background: var(--bg);
+  line-height: 1.65;
+}
+
+.container {
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+/* ---- header ---- */
+header.hero {
+  padding: 72px 24px 48px;
+  text-align: center;
+  background:
+    radial-gradient(1200px 500px at 50% -10%, var(--brand-soft), transparent 70%),
+    var(--bg);
+}
+.logo {
+  width: 64px; height: 64px;
+  border-radius: 16px;
+  background: linear-gradient(135deg, var(--brand), #1f4a3d);
+  color: #fff;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 30px;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+header.hero h1 {
+  font-size: 40px;
+  margin: 0 0 8px;
+  letter-spacing: -0.5px;
+}
+header.hero .tagline {
+  font-size: 18px;
+  color: var(--muted);
+  margin: 0 0 24px;
+}
+.badge {
+  display: inline-block;
+  padding: 8px 18px;
+  border-radius: 999px;
+  background: var(--brand);
+  color: #fff;
+  font-weight: 600;
+  text-decoration: none;
+  letter-spacing: 0.2px;
+}
+.badge.ghost {
+  background: transparent;
+  color: var(--brand);
+  border: 1.5px solid var(--brand);
+  margin-left: 8px;
+}
+
+/* ---- sections ---- */
+section { padding: 40px 0; border-top: 1px solid var(--line); }
+section h2 { font-size: 24px; margin: 0 0 8px; }
+section p { color: var(--muted); margin: 0 0 12px; }
+
+.feat-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 16px;
+  margin-top: 20px;
+}
+@media (min-width: 640px) {
+  .feat-grid { grid-template-columns: 1fr 1fr 1fr; }
+}
+.feat {
+  background: #fff;
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  padding: 20px;
+}
+.feat h3 { margin: 0 0 6px; font-size: 16px; }
+.feat p { font-size: 14px; margin: 0; }
+
+/* ---- prose (privacy / support) ---- */
+.prose h1 { font-size: 30px; margin: 24px 0 4px; }
+.prose .updated { color: var(--muted); font-size: 13px; margin-bottom: 24px; }
+.prose h2 { font-size: 20px; margin: 28px 0 6px; }
+.prose p, .prose li { color: var(--muted); }
+.prose ul { margin: 8px 0 16px; padding-left: 20px; }
+.prose a { color: var(--brand); }
+
+footer {
+  padding: 40px 24px;
+  text-align: center;
+  color: var(--muted);
+  font-size: 13px;
+}
+footer a { color: var(--muted); margin: 0 10px; text-decoration: none; }
+footer a:hover { color: var(--brand); }
