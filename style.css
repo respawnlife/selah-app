@@ -106,7 +106,7 @@ section p { color: var(--muted); margin: 0 0 12px; }
 }
 .shots img {
   display: block;
-  width: 220px;
+  width: calc((100% - 28px) / 3);
   height: auto;
   flex: 0 0 auto;
   border-radius: 20px;
@@ -115,6 +115,7 @@ section p { color: var(--muted); margin: 0 0 12px; }
 }
 @media (max-width: 559px) {
   .shots { justify-content: flex-start; }
+  .shots img { width: 200px; }
 }
 
 /* ---- prose (privacy / support) ---- */
