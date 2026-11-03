@@ -93,6 +93,30 @@ section p { color: var(--muted); margin: 0 0 12px; }
 .feat h3 { margin: 0 0 6px; font-size: 16px; }
 .feat p { font-size: 14px; margin: 0; }
 
+/* ---- screenshots ---- */
+.shots {
+  display: flex;
+  gap: 14px;
+  margin: 20px 0 0;
+  padding: 4px 0 12px;
+  overflow-x: auto;
+  justify-content: center;
+  justify-content: safe center;
+  -webkit-overflow-scrolling: touch;
+}
+.shots img {
+  display: block;
+  width: 220px;
+  height: auto;
+  flex: 0 0 auto;
+  border-radius: 20px;
+  border: 1px solid var(--line);
+  box-shadow: 0 14px 40px rgba(31, 46, 42, 0.18);
+}
+@media (max-width: 559px) {
+  .shots { justify-content: flex-start; }
+}
+
 /* ---- prose (privacy / support) ---- */
 .prose h1 { font-size: 30px; margin: 24px 0 4px; }
 .prose .updated { color: var(--muted); font-size: 13px; margin-bottom: 24px; }
